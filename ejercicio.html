@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="contenido"></div>
+	<a href="#" id="boton">ejecutar</a>
+
+</body>
+<script type="text/javascript">
+	// const contenido = document.getElementById('contenido');
+	// const boton = document.getElementById('boton');
+
+	// const llenar = ()=>{
+	// 	contenido.innerHTML = 'hola mundo';
+	// }
+	// boton.addEventListener('click', llenar);
+
+	class AAA {
+		constructor(){
+			this.contenido = document.getElementById('contenido');
+		}
+		
+		llenar(){
+			this.contenido.innerHTML = 'hola mundo';
+		}
+
+		init(){
+			const boton = document.getElementById('boton');
+			boton.addEventListener('click', this.llenar);
+			// boton.addEventListener('click', ()=>{
+			// 	 this.llenar();
+			// });
+		}
+		
+	}
+
+	const aaa = new AAA();
+	aaa.init();
+
+</script>
+</html>
